@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  node-dev:
+    build:
+      context: .
+      dockerfile: ./docker/node-dev/Dockerfile
+    tty: true
+    volumes:
+      - .:/app
+      - n_modules:/app/node_modules
+volumes:
+  n_modules:
